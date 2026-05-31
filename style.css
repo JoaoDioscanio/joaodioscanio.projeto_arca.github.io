@@ -1,0 +1,633 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================== */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e67e22; /* Laranja caloroso para botões e destaques */
+    --background-light: #f8f9fa;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --border-color: #dddddd;
+    --success-color: #27ae60;
+    --danger-color: #c0392b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   HEADER / MENU DE NAVEGAÇÃO (Fiel ao Frame 1)
+   ========================================== */
+header {
+    background-color: var(--text-light);
+    border-bottom: 2px solid var(--border-color);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-color);
+}
+
+/* ==========================================
+   COMPONENTES REUTILIZÁVEIS
+   ========================================== */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #d35400;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* ==========================================
+   RODAPÉ (FOOTER)
+   ========================================== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+
+
+/* CSS Específico da Home */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1200') no-repeat center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; text-transform: uppercase; }
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.action-card {
+    background: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.action-card i { font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem; }
+.action-card h3 { margin-bottom: 1rem; color: var(--primary-color); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #2a5862 0%, #345b69 100%);
+    color: #102a36;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.login-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: 32px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.18);
+    min-height: 580px;
+}
+
+.login-content {
+    padding: 52px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login-header h2 {
+    font-size: clamp(2.2rem, 2.4vw, 3rem);
+    margin: 0;
+    color: #111111;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0f1d26;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    border-radius: 28px;
+    padding: 18px 22px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+    border-color: #5a9caf;
+    box-shadow: 0 0 0 4px rgba(90, 156, 175, 0.15);
+}
+
+.login-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.forgot-link {
+    color: #1e3a4a;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    border-radius: 28px;
+    padding: 18px 28px;
+    background: #ff9c2c;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 8px;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 30px rgba(255, 156, 44, 0.22);
+}
+
+.signup {
+    margin: 16px 0 0;
+    font-size: 0.95rem;
+    color: #4b5864;
+    text-align: center;
+}
+
+.message {
+    margin-top: 4px;
+    font-size: 0.95rem;
+    color: #d64545;
+    min-height: 1.25em;
+}
+
+.login-visual {
+    background: linear-gradient(180deg, #7ddaf3 0%, #6ec2e0 40%, #8fd4f9 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 1. Removemos o padding para a imagem encostar nas bordas */
+    padding: 0; 
+    /* 2. Garante que a imagem respeite a borda arredondada do card */
+    overflow: hidden; 
+}
+
+
+.login-visual::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    top: 24px;
+    right: 24px;
+}
+
+@media (max-width: 940px) {
+    .login-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .login-visual {
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 620px) {
+    body {
+        padding: 16px;
+    }
+
+    .login-content {
+        padding: 32px 24px;
+    }
+
+    .login-card {
+        border-radius: 24px;
+    }
+
+    input {
+        padding: 16px 18px;
+    }
+
+    button {
+        padding: 16px 22px;
+    }
+}
+
+
+.login-image {
+    width: 100%;
+    height: 100%;
+    /* 3. 'cover' faz a imagem preencher todo o espaço. Se preferir ver ela inteira sem cortar nada nas pontas, use 'contain' */
+    object-fit: cover; 
+    /* 4. Garante o alinhamento no centro */
+    object-position: center;}
+
+
+
+
+
+
+
+
+
+/*adoção*/
+
+.adoption-page {
+    width: 100%;
+    max-width: 1220px;
+    margin: 24px auto;
+    padding: 0 16px 32px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px 28px;
+    border-radius: 24px;
+    backdrop-filter: blur(16px);
+    margin-bottom: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-mark {
+    display: inline-flex;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: #ffd17a;
+    color: #11414d;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.brand strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.brand small {
+    display: block;
+    color: #dce9f1;
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.topbar nav {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.topbar nav a,
+.login-button {
+    color: #f8fbff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-button {
+    background: #ff9c2c;
+    padding: 12px 26px;
+    border-radius: 999px;
+}
+
+.search-panel {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: end;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 24px;
+    border-radius: 30px;
+    margin-bottom: 28px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field-group label {
+    color: #e9f4fe;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+select {
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 0.96rem;
+    color: #102a36;
+}
+
+.search-button {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    padding: 16px 20px;
+    background: #ff9c2c;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.search-button:hover {
+    transform: translateY(-1px);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.section-tag {
+    font-size: 1.2rem;
+    color: #f8fbff;
+    border-bottom: 4px solid #ff9c2c;
+    padding-bottom: 4px;
+    font-weight: 700;
+}
+
+.results-count {
+    color: #d6e8f3;
+    font-weight: 600;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.pet-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.09);
+    display: flex;
+    flex-direction: column;
+}
+
+.pet-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 18px 20px 22px;
+    display: grid;
+    gap: 10px;
+}
+
+.card-body h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #102a36;
+}
+
+.card-body p {
+    margin: 0;
+    color: #546c79;
+    font-size: 0.92rem;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.available {
+    background: #ddf5dc;
+    color: #25612c;
+}
+
+.card-link {
+    display: inline-flex;
+    margin-top: 10px;
+    color: #127199;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid #127199;
+    padding: 10px 16px;
+    border-radius: 18px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.card-link:hover {
+    background: #127199;
+    color: #fff;
+}
+
+@media (max-width: 1100px) {
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 860px) {
+    .topbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-panel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 680px) {
+    .search-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar nav {
+        width: 100%;
+        justify-content: center;
+    }
+}

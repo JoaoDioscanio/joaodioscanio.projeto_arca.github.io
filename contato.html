@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Programa Arca</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contato.css">    
+    <link rel="icon" type="image/png" href="./images/dog.png">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo-container">
+            <img src="./images/Logo-ArcaTransparente.png" alt="Programa Arca Logo" class="logo-img">
+        </a>
+        <nav>
+            <li><a href="tutor.html">Início</a></li>
+            <li><a href="contato.html" class="active">Contato</a></li>
+            <li><a href="about_us.html">Sobre nós</a></li>
+            <li><a href="index.html" class="btn-entrar">Entrar</a></li>
+        </nav>
+    </header>
+    <main class="main-container">
+        <div class="titulo-pagina">
+            <h1>Fale Conosco</h1>
+            <p>Tem dúvidas sobre adoção, denúncias ou quer ajudar? Entre em contato com a nossa equipe.</p>
+        </div>
+        <div class="contato-wrapper">
+            <div class="info-col">
+                <div>
+                    <h2>Informações de Contato</h2>
+                    <p>Estamos prontos para atender você e ajudar nossos amigos de quatro patas.</p>
+
+                    <div class="info-detalhes">
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>contato@programaarca.com.br</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Av. Principal dos Animais, 123 - São Paulo/SP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p style="margin-bottom: 15px; font-size: 14px;">Siga nossas redes sociais:</p>
+                    <div class="redes-sociais">
+                        <a href="https://www.facebook.com/prefeituradaserra/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/prefeituraserra/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.link/r7nv0b" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-col">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto"
+                            placeholder="Ex: Dúvida sobre adoção, Voluntariado" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

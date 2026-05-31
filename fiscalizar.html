@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Arca - Fiscalizar Ocorrências</title>
+    <!-- FontAwesome para os ícones operacionais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="fiscalizar.css">
+    <link rel="icon" type="image/png" href="./images/dog.png">
+</head>
+
+<body>
+
+    <!-- Navbar Padrão Arca Corrigida -->
+    <nav>
+        <div class="logo-container">
+            <img src="./images/Logo-ArcaTransparente.png" alt="Logo Programa Arca">
+        </div>
+        <div class="nav-links">
+            <a href="prefeitura.html">Início</a>
+            <a href="contato.html">Contato</a>
+            <a href="about_us.html">Sobre nós</a>
+            <a href="index.html" class="btn-entrar">Entrar</a>
+        </div>
+    </nav>
+
+    <!-- Área de Gestão de Casos -->
+    <main>
+        <div class="header-painel">
+            <h1><i class="fa-solid fa-clipboard-list"></i> Fiscalizar Ocorrências</h1>
+            <a href="prefeitura.html" class="btn-voltar"><i class="fa-solid fa-arrow-left"></i> Voltar ao Menu</a>
+        </div>
+
+        <!-- Ferramentas Operacionais superiores -->
+        <div class="ferramentas-busca">
+            <div class="busca-input-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar por bairro, espécie ou ID...">
+            </div>
+
+            <div class="filtros-status">
+                <button class="btn-filtro ativo">Todos</button>
+                <button class="btn-filtro">Pendentes</button>
+                <button class="btn-filtro">Em Andamento</button>
+                <button class="btn-filtro">Resolvidos</button>
+            </div>
+        </div>
+
+        <!-- Tabela Gerencial de Denúncias/Casos -->
+        <div class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data/Hora</th>
+                        <th>Animal / Espécie</th>
+                        <th>Bairro / Localização</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>#2026-089</strong></td>
+                        <td>29/05/2026 14:20</td>
+                        <td>Cão (Abandono/Maus-tratos)</td>
+                        <td>Parque Residencial Laranjeiras</td>
+                        <td><span class="badge pendente"><i class="fa-solid fa-clock"></i> Pendente</span></td>
+                        <td class="acoes-flex">
+                            <button class="btn-acao ver" title="Ver Detalhes"><i class="fa-solid fa-eye"></i></button>
+                            <button class="btn-acao fiscalizar" title="Iniciar Fiscalização">Atender Caso</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>#2026-085</strong></td>
+                        <td>28/05/2026 09:15</td>
+                        <td>Gato (Ferido na via pública)</td>
+                        <td>Colina de Laranjeiras</td>
+                        <td><span class="badge andamento"><i class="fa-solid fa-truck-pickup"></i> Em Rota</span></td>
+                        <td class="acoes-flex">
+                            <button class="btn-acao ver" title="Ver Detalhes"><i class="fa-solid fa-eye"></i></button>
+                            <button class="btn-acao fiscalizar" title="Atualizar Status">Atualizar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>#2026-074</strong></td>
+                        <td>26/05/2026 16:40</td>
+                        <td>Cão (Resgate Concluído)</td>
+                        <td>Jacaraípe</td>
+                        <td><span class="badge resolvido"><i class="fa-solid fa-check-double"></i> Resolvido</span></td>
+                        <td class="acoes-flex">
+                            <button class="btn-acao ver" title="Ver Histórico"><i class="fa-solid fa-folder-open"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+
+</html>

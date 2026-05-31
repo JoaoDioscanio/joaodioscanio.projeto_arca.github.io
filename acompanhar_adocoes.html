@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="acompanhar_adocoes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="./images/dog.png">
+</head>
+<body>
+     <header>
+        <div class="logo"><img src="./images/Logo-ArcaTransparente.png" alt=""></div>
+        <nav>
+            <ul>
+                <li><a href="ong.html" class="active">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="about_us.html">Sobre nós</a></li>
+                <li><a href="index.html" class="btn-entrar">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="page-title">Acompanhar Adoções</h1>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Busque pelo nome do animal, tutor ou número do processo...">
+                <button type="button" id="searchBtn" class="btn-search">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+
+            <div class="filters">
+                <select id="filterStatus" class="filter-select">
+                    <option value="">Todos os Status</option>
+                    <option value="em_processo">Em Processo</option>
+                    <option value="aprovada">Aprovada</option>
+                    <option value="finalizada">Finalizada</option>
+                    <option value="recusada">Recusada</option>
+                </select>
+
+                <select id="filterTipo" class="filter-select">
+                    <option value="">Todos os Animais</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <button type="button" id="clearFilters" class="btn-clear-filters">
+                    <i class="fas fa-times"></i> Limpar Filtros
+                </button>
+            </div>
+
+            <div class="adoption-list" id="adoptionList">
+                
+                <div class="adoption-card">
+                    <div class="card-header">
+                        <div class="animal-info">
+                            <h3>Bolinha</h3>
+                            <span class="badge badge-cachorro">Cachorro</span>
+                        </div>
+                        <span class="status-badge status-em_processo">Em Processo</span>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="info-row">
+                            <label>Número do Processo:</label>
+                            <span>#ADO-2026-001</span>
+                        </div>
+
+                        <div class="info-row">
+                            <label>Tutor:</label>
+                            <span>João Silva</span>
+                        </div>
+
+                        <div class="info-row">
+                            <label>Data de Início:</label>
+                            <span>15 de maio de 2026</span>
+                        </div>
+
+                        <div class="info-row">
+                            <label>Raça:</label>
+                            <span>Labrador Retriever</span>
+                        </div>
+
+                        <div class="progress-section">
+                            <h4>Progresso da Adoção</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <div class="steps">
+                                <div class="step completed">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Formulário</span>
+                                </div>
+                                <div class="step completed">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Visitação</span>
+                                </div>
+                                <div class="step active">
+                                    <i class="fas fa-circle"></i>
+                                    <span>Análise</span>
+                                </div>
+                                <div class="step">
+                                    <i class="fas fa-circle-o"></i>
+                                    <span>Aprovação</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="next-step">
+                            <strong>Próximo Passo:</strong> Análise do perfil do tutor
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-detalhes" onclick="verDetalhes(1)">
+                            <i class="fas fa-info-circle"></i> Ver Detalhes
+                        </button>
+                        <button class="btn btn-mensagem">
+                            <i class="fas fa-envelope"></i> Enviar Mensagem
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="adoption-card">
+                    <div class="card-header">
+                        <div class="animal-info">
+                            <h3>Miau</h3>
+                            <span class="badge badge-gato">Gato</span>
+                        </div>
+                        <span class="status-badge status-aprovada">Aprovada</span>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="info-row">
+                            <label>Número do Processo:</label>
+                            <span>#ADO-2026-002</span>
+                        </div>
+
+                        <div class="info-row">
+                            <label>Tutor:</label>
+                            <span>Maria Santos</span>
+                        </div>
+
+                        <div class="info-row">
+                            <label>Data de Início:</label>
+                            <span>10 de maio de 2026</span>
+                        </div>
+
+                        <div class="info-row">
+                            <label>Raça:</label>
+                            <span>Persa</span>
+                        </div>
+
+                        <div class="progress-section">
+                            <h4>Progresso da Adoção</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <div class="steps">
+                                <div class="step completed">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Formulário</span>
+                                </div>
+                                <div class="step completed">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Visitação</span>
+                                </div>
+                                <div class="step completed">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Análise</span>
+                                </div>
+                                <div class="step completed">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Aprovação</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="next-step">
+                            <strong>Status Final:</strong> Adoção Aprovada! Parabéns!
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-detalhes" onclick="verDetalhes(2)">
+                            <i class="fas fa-info-circle"></i> Ver Detalhes
+                        </button>
+                        <button class="btn btn-mensagem">
+                            <i class="fas fa-envelope"></i> Enviar Mensagem
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <i class="fas fa-inbox"></i>
+                <h3>Nenhuma adoção encontrada</h3>
+                <p>Tente ajustar seus filtros de busca</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Projeto Arca. Todos os direitos reservados.</p>
+        <img src="./images/BRASAO_PREF_SERRA_HORIZONTAL_NEGATIVA.png" alt="" style="display:flex; width: 150px;">
+    </footer>
+    <script>
+    
+            
+        function verDetalhes(id) {
+            alert(`Abrindo detalhes da adoção #${id}`);
+            
+        }
+
+       
+        document.querySelectorAll('.btn-mensagem').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Abrir formulário de mensagem para o tutor');
+                
+            });
+        });
+    </script>
+</body>
+</html>

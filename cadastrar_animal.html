@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Animal</title>
+    <link rel="stylesheet" href="cadastrar_animal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="./images/dog.png">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="./images/Logo-ArcaTransparente.png" alt=""></div>
+        <nav>
+            <ul>
+                <li><a href="ong.html" class="active">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="about_us.html">Sobre nós</a></li>
+                <li><a href="index.html" class="btn-entrar">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Cadastro de Animal</h1>
+            
+            <form class="form-cadastro" id="formCadastro">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome do Animal *</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Ex: Bolinha">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Animal *</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="">Selecione um tipo</option>
+                            <option value="cachorro">Cachorro</option>
+                            <option value="gato">Gato</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="raca">Raça *</label>
+                        <input type="text" id="raca" name="raca" required placeholder="Ex: Labrador">
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade (em anos) *</label>
+                        <input type="number" id="idade" name="idade" required min="0" max="50" placeholder="Ex: 3">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="genero">Gênero *</label>
+                        <select id="genero" name="genero" required>
+                            <option value="">Selecione</option>
+                            <option value="macho">Macho</option>
+                            <option value="femea">Fêmea</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status *</label>
+                        <select id="status" name="status" required>
+                            <option value="">Selecione um status</option>
+                            <option value="disponivel">Disponível para Adoção</option>
+                            <option value="acolhimento">Em Acolhimento</option>
+                            <option value="tratamento">Em Tratamento</option>
+                            <option value="adotado">Adotado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição do Animal *</label>
+                    <textarea id="descricao" name="descricao" required rows="5" placeholder="Descreva o comportamento, características especiais, temperamento, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="foto">Foto do Animal</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+                    <small>Máximo 5MB. Aceita: JPG, PNG, GIF</small>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-enviar">
+                        <i class="fas fa-check"></i> Cadastrar Animal
+                    </button>
+                    <button type="reset" class="btn btn-limpar">
+                        <i class="fas fa-redo"></i> Limpar Formulário
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Projeto Arca. Todos os direitos reservados.</p>
+        <img src="./images/BRASAO_PREF_SERRA_HORIZONTAL_NEGATIVA.png" alt="" style="display:flex; width: 150px;">
+    </footer>
+    <script src="./script.js"></script>
+    <script>
+        // Validação do formulário de cadastro
+        const formCadastro = document.getElementById('formCadastro');
+        
+        if (formCadastro) {
+            formCadastro.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validar tamanho da imagem
+                const foto = document.getElementById('foto');
+                if (foto.files.length > 0) {
+                    const fileSize = foto.files[0].size / 1024 / 1024; // em MB
+                    if (fileSize > 5) {
+                        alert('O arquivo é muito grande! Máximo de 5MB.');
+                        return;
+                    }
+                }
+                
+                // Mostrar mensagem de sucesso
+                alert('Animal cadastrado com sucesso! Obrigado por contribuir com o Projeto Arca.');
+                formCadastro.reset();
+                
+                // Aqui você pode adicionar código para enviar os dados ao servidor
+                // Por enquanto, apenas reseta o formulário
+            });
+        }
+    </script>
+</body>
+</html>

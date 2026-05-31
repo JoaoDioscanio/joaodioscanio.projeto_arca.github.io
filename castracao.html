@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castração - Projeto Arca</title>
+    <link rel="stylesheet" href="castracao.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./images/Logo-ArcaTransparente.png" alt="Logo Arca Transparente">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="tutor.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="about_us.html">Sobre nós</a></li>
+                <li><a href="index.html" class="btn-entrar">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Agendamento de Castração Gratuita</h1>
+        <p class="subtitle">O Projeto Arca, em parceria com a Prefeitura da Serra, promove o controle populacional e o bem-estar dos animais de estimação.</p>
+
+        <section class="info-section">
+            <div class="info-card">
+                <h2>Por que castrar?</h2>
+                <p>A castração previne doenças graves como tumores, reduz a demarcação de território, evita fugas e brigas, além de combater o abandono de filhotes nas ruas da nossa cidade.</p>
+            </div>
+            
+            <div class="info-card">
+                <h2>Pré-requisitos</h2>
+                <ul>
+                    <li>Residir no município da Serra - ES;</li>
+                    <li>O animal deve ter entre 6 meses e 6 anos de idade;</li>
+                    <li>Estar com a saúde em dia (sem pulgas, carrapatos ou doenças visíveis);</li>
+                    <li>Apresentar RG, CPF e Comprovante de Residência no dia agendado.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Solicitar Cadastro para Castração</h2>
+            <p>Preencha os dados abaixo para entrar na fila de triagem do projeto.</p>
+            
+            <form action="#" method="POST" class="castracao-form" id="formCastracao">
+                <div class="form-group">
+                    <label for="nome-tutor">Nome do Tutor *</label>
+                    <input type="text" id="nome-tutor" name="nome-tutor" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp/Telefone *</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="(27) 99999-9999" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bairro">Bairro (Serra) *</label>
+                    <input type="text" id="bairro" name="bairro" placeholder="Ex: Laranjeiras" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nome-pet">Nome do Animal</label>
+                    <input type="text" id="nome-pet" name="nome-pet" placeholder="Ex: Thor, Mel">
+                </div>
+
+                <div class="form-group">
+                    <label for="especie">Espécie *</label>
+                    <select id="especie" name="especie" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="cao">Cão (Cachorro)</option>
+                        <option value="gato">Gato</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sexo">Sexo do Animal *</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="macho">Macho</option>
+                        <option value="femea">Fêmea</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="idade">Idade Aproximada *</label>
+                    <input type="text" id="idade" name="idade" placeholder="Ex: 1 ano e 2 meses" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Solicitação</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Projeto Arca. Todos os direitos reservados.</p>
+        <img src="./images/BRASAO_PREF_SERRA_HORIZONTAL_NEGATIVA.png" alt="Brasão Prefeitura de Serra">
+    </footer>
+
+    <script>
+        
+        var formulario = document.getElementById('formCastracao');
+
+        
+        formulario.addEventListener('submit', function(event) {
+            
+            event.preventDefault(); 
+            alert('Solicitação enviada com sucesso! Entraremos em contato em breve.');
+            
+            formulario.reset();
+        });
+    </script>
+
+</body>
+</html>

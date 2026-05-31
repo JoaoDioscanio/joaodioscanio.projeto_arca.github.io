@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Arca - Painel Geral Estatístico</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="painel.css">
+    <link rel="icon" type="image/png" href="./images/dog.png">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="./images/Logo-ArcaTransparente.png">
+        </div>
+        <div class="nav-links">
+            <a href="prefeitura.html">Início</a>
+            <a href="contato.html">Contato</a>
+            <a href="about_us.html">Sobre nós</a>
+            <a href="index.html" class="btn-entrar">Entrar</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="header-painel">
+            <h1><i class="fa-solid fa-chart-bar"></i> Painel Geral Estatístico</h1>
+            <a href="prefeitura.html" class="btn-voltar"><i class="fa-solid fa-arrow-left"></i> Voltar ao Menu</a>
+        </div>
+
+        <div class="kpi-container">
+            <div class="kpi-card">
+                <div class="kpi-info">
+                    <h3>Animais Resgatados</h3>
+                    <p>1.248</p>
+                </div>
+                <div class="kpi-icon"><i class="fa-solid fa-kit-medical"></i></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-info">
+                    <h3>Adotados / Acolhidos</h3>
+                    <p>842</p>
+                </div>
+                <div class="kpi-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-info">
+                    <h3>Casos Atendidos</h3>
+                    <p>93%</p>
+                </div>
+                <div class="kpi-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-info">
+                    <h3>Clínicas Parceiras</h3>
+                    <p>14</p>
+                </div>
+                <div class="kpi-icon"><i class="fa-solid fa-handshake"></i></div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h2><i class="fa-solid fa-timeline"></i> Evolução Mensal de Atendimentos</h2>
+                <div class="chart-wrapper">
+                    <canvas id="evolucaoChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2><i class="fa-solid fa-pie-chart"></i> Resgates por Espécie</h2>
+                <div class="chart-wrapper">
+                    <canvas id="especieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const azulArca = '#2c3e50';
+        const laranjaArca = '#e67e22';
+        const ctxEvolucao = document.getElementById('evolucaoChart').getContext('2d');
+        new Chart(ctxEvolucao, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                datasets: [{
+                    label: 'Animais Resgatados',
+                    data: [180, 220, 210, 285, 353, 410],
+                    backgroundColor: laranjaArca,
+                    borderRadius: 4
+                }, {
+                    label: 'Adoções Realizadas',
+                    data: [140, 160, 195, 210, 237, 290],
+                    type: 'line',
+                    borderColor: azulArca,
+                    backgroundColor: 'transparent',
+                    borderWidth: 3,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+        const ctxEspecie = document.getElementById('especieChart').getContext('2d');
+        new Chart(ctxEspecie, {
+            type: 'doughnut',
+            data: {
+                labels: ['Cães', 'Gatos', 'Aves/Outros'],
+                datasets: [{
+                    data: [65, 28, 7],
+                    backgroundColor: [laranjaArca, azulArca, '#95a5a6'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e67e22; 
+    --background-light: #F4F8F9;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --border-color: #6e336db9;
+    --success-color: #27ae60;
+    --danger-color: #c0392b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-color);
+}
+
+.btn-entrar {
+    background-color: var(--accent-color) !important;
+    color: var(--text-light) !important;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 25px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-entrar:hover {
+    background-color: #d35400 !important;
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.btn, .btn-ver-mais {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: auto; 
+    width: 100%;
+    max-width: 180px;
+}
+
+.btn:hover, .btn-ver-mais:hover {
+    background-color: #d35400;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+footer img {
+    position: absolute;
+    left: 20px;
+    width: 120px; 
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1200') no-repeat center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+    text-transform: uppercase; 
+}
+
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 1.5rem;
+    margin: 3rem 0;
+    justify-content: center;  
+    width: 100%;
+}
+
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;        
+    gap: 1rem;          
+    margin: 3rem 0;
+    justify-content: center;  
+    width: 100%;
+}
+
+.action-card {
+    background: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;   
+    align-items: center;     
+    flex: 1 1 calc(25% - 1.5rem); 
+    min-width: 220px;       
+    max-width: 280px;        
+    min-height: 340px;     
+    box-sizing: border-box;
+}
+
+.action-card h3 { 
+    margin-top: 15px;
+    margin-bottom: 1.5rem; 
+    color: var(--primary-color); 
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.action-card .btn, 
+.action-card .btn-ver-mais {
+    margin-top: auto !important; 
+    width: 100%;
+    max-width: 180px;
+    display: inline-block;
+}
+
+.icon-container {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center; 
+    align-items: center;
+    margin-bottom: 15px;
+    width: 90px;  
+    height: 70px;
+}
+
+.icon-container .fa-solid {
+    grid-column: 1;
+    grid-row: 1;
+    line-height: 1 !important;
+}
+
+.icon-container .fa-circle-check,
+.icon-container .fa-user-plus,
+.icon-container .fa-calendar-days,
+.icon-container .fa-heart {
+    color: #e67e22;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px #ffffff;
+    z-index: 2;
+}
+
+.icon-container .fa-clipboard { font-size: 60px; color: #e67e22; }
+.icon-container .fa-user-plus {
+    font-size: 20px;
+    padding: 2px;
+    border-radius: 50%;
+    justify-self: end; 
+    align-self: end;   
+}
+
+.icon-container .fa-chart-simple { font-size: 60px; color: #e67e22; }
+.icon-container .fa-calendar-days {
+    font-size: 22px;
+    border-radius: 4px;
+    justify-self: end; 
+    align-self: end;   
+}
+
+.icon-container .fa-handshake { font-size: 55px; color: #e67e22; }
+.icon-container .fa-heart {
+    font-size: 18px;
+    border-radius: 50%;
+    justify-self: center; 
+    align-self: start;    
+}
+
+.icon-container .fa-house { font-size: 60px; color: #e67e22; }
+.icon-container .fa-circle-check {
+    font-size: 24px;
+    border-radius: 50%;
+    justify-self: end; 
+    align-self: end;   
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .quick-actions {
+        gap: 1.5rem;
+    }
+
+    .action-card {
+        flex: 1 1 100%;    
+        max-width: 100%;   
+        min-height: auto;  
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 40px 20px 20px 20px;
+    }
+
+    footer img {
+        position: static; 
+        margin-bottom: 5px;
+    }
+}
