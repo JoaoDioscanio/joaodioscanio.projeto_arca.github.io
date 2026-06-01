@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Arca - Ajudar Tratamentos e Doações</title>
+    <link rel="stylesheet" href="ajudar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="./images/dog.png">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="./images/Logo-ArcaTransparente.png">
+        </div>
+        <nav class="menu">
+            <a href="tutor.html">Início</a>
+            <a href="contato.html">Contato</a>
+            <a href="about_us.html">Sobre nós</a>
+            <a href="index.html" class="btn-entrar">Entrar</a>
+        </nav>
+    </header>
+
+    <section class="donation-banner">
+        <div class="banner-content">
+            <h1>TRANSFORME VIDAS COM A SUA AJUDA</h1>
+            <p>Cada centavo arrecadado é destinado diretamente para o tratamento médico, medicamentos e alimentação dos animais resgatados.</p>
+        </div>
+    </section>
+
+    <main class="donation-container">
+        
+        <section class="donation-card fast-donation">
+            <h2><i class="fa-solid fa-bolt"></i> Doação Rápida via PIX</h2>
+            <p>Abra o aplicativo do seu banco e aponte a câmera para o QR Code ou copie a chave abaixo.</p>
+            
+            <div class="pix-area">
+                <div class="qr-code-placeholder">
+                    <i class="fa-solid fa-qrcode"></i>
+                    <span>QR CODE SIMULADO</span>
+                </div>
+                
+                <div class="pix-key-wrapper">
+                    <label for="pix-key">Chave PIX (CNPJ):</label>
+                    <div class="copy-input-btn">
+                        <input type="text" id="pix-key" value="00.000.000/0001-00" readonly>
+                        <button onclick="copyPix()" class="btn-orange">Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation-card custom-donation">
+            <h2><i class="fa-solid fa-heart"></i> Escolha o Valor da Contribuição</h2>
+            <p>Selecione um valor ou digite quanto deseja doar.</p>
+            
+            <div class="value-buttons">
+                <button class="btn-value">R$ 20</button>
+                <button class="btn-value active">R$ 50</button>
+                <button class="btn-value">R$ 100</button>
+                <button class="btn-value">Outro</button>
+            </div>
+
+            <form class="payment-form">
+                <div class="form-group">
+                    <label for="donor-name">Nome Completo</label>
+                    <input type="text" id="donor-name" placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="donor-email">E-mail</label>
+                    <input type="email" id="donor-email" placeholder="seu@email.com">
+                </div>
+                <button type="submit" class="btn-orange btn-submit">Avançar para o Pagamento</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <img src="./images/BRASAO_PREF_SERRA_HORIZONTAL_NEGATIVA.png" alt="" style="display:flex; width: 150px;">
+        <p>&copy; 2026 Projeto Arca. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função simples para o botão de copiar chave PIX
+        function copyPix() {
+            var copyText = document.getElementById("pix-key");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            alert("Chave PIX copiada com sucesso!");
+        }
+    </script>
+</body>
+</html>

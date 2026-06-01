@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header / Navbar */
+.navbar {
+    background-color: #2b3647;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    color: #fff;
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #f39c12;
+}
+
+.menu .btn-entrar {
+    background-color: #e67e22;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.menu .btn-entrar:hover {
+    background-color: #d35400;
+    color: #fff;
+}
+
+/* Banner da Página */
+.donation-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1600') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner-content h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Container de Conteúdo Principal */
+.donation-container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    flex: 1;
+}
+
+/* Cards de Doação */
+.donation-card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #e67e22;
+}
+
+.donation-card h2 {
+    color: #2b3647;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.donation-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* Área do PIX */
+.pix-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.qr-code-placeholder {
+    width: 160px;
+    height: 160px;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 0.8rem;
+    gap: 10px;
+    border-radius: 4px;
+}
+
+.qr-code-placeholder i {
+    font-size: 3rem;
+    color: #333;
+}
+
+.pix-key-wrapper {
+    width: 100%;
+}
+
+.pix-key-wrapper label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.copy-input-btn {
+    display: flex;
+    width: 100%;
+}
+
+.copy-input-btn input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    background: #f9f9f9;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Botões laranjas padrão */
+.btn-orange {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-orange:hover {
+    background-color: #d35400;
+}
+
+.copy-input-btn .btn-orange {
+    border-radius: 0 4px 4px 0;
+}
+
+/* Área de valores selecionáveis */
+.value-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn-value {
+    background: white;
+    border: 2px solid #ccc;
+    padding: 12px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.btn-value:hover, .btn-value.active {
+    border-color: #e67e22;
+    color: #e67e22;
+    background-color: #fffaf5;
+}
+
+/* Formulário */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.btn-submit {
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+/* Footer padrão */
+.footer {
+    background-color: #2b3647;
+    color: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+.footer-center {
+    color: #bbb;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .donation-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar, .footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .menu a {
+        margin: 0 10px;
+    }
+    
+    .value-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
