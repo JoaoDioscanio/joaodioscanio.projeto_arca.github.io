@@ -1,7 +1,6 @@
-
 :root {
     --primary-color: #2c3e50;
-    --accent-color: #e67e22; 
+    --accent-color: #e67e22;
     --background-light: #F4F8F9;
     --text-dark: #333333;
     --text-light: #ffffff;
@@ -51,7 +50,8 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     color: #e67e22;
 }
 
@@ -59,7 +59,7 @@ nav a:hover, nav a.active {
 .btn-entrar {
     background-color: #e67e22;
     padding: 8px 18px;
-    border-radius: 4px; 
+    border-radius: 4px;
 }
 
 .btn-entrar:hover {
@@ -71,7 +71,7 @@ nav a:hover, nav a.active {
     max-width: 900px;
     margin: 30px auto;
     padding: 20px;
-    background-color: white; 
+    background-color: white;
     border: 1px solid #ddd;
 }
 
@@ -93,7 +93,7 @@ nav a:hover, nav a.active {
 .info-card {
     margin-bottom: 20px;
     padding: 15px;
-    border-left: 5px solid #e67e22; 
+    border-left: 5px solid #e67e22;
     background-color: #f9f9f9;
 }
 
@@ -133,7 +133,7 @@ nav a:hover, nav a.active {
 }
 
 
-.form-group input, 
+.form-group input,
 .form-group select {
     width: 100%;
     padding: 8px;
@@ -186,17 +186,46 @@ footer {
     justify-content: center;
     position: relative;
     padding: 20px;
-   
+
 }
 
 footer img {
     position: absolute;
     left: 20px;
-    width: 120px; 
+    width: 120px;
 }
 
 footer p {
     margin: 0;
     color: white;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 40px 20px 20px 20px;
+    }
+
+    footer img {
+        position: static;
+        margin-bottom: 5px;
+    }
 }
