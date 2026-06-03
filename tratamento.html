@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento | Projeto Arca</title>
+    <link rel="icon" type="image/png" href="./images/dog.png">
+    <link rel="stylesheet" href="tratamento.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/Logo-ArcaTransparente.png" alt="Logo Arca">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="tutor.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="about_us.html">Sobre nós</a></li>
+                <li><a href="ajudar.html">Doação</a></li>
+                <li><a href="index.html" class="btn-entrar">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Agendamento de Tratamento</h1>
+            <p class="page-description">Agende o tratamento do seu pet de forma simples e segura. Escolha o cuidado necessário e informe os detalhes para nossa equipe.</p>
+
+            <form class="form-cadastro" id="formTratamento">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome do pet *</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Ex: Nina">
+                    </div>
+                    <div class="form-group">
+                        <label for="tratamento">Tipo de tratamento *</label>
+                        <select id="tratamento" name="tratamento" required>
+                            <option value="">Selecione</option>
+                            <option>Vacinação</option>
+                            <option>Vermifugação</option>
+                            <option>Consulta médica</option>
+                            <option>Cirurgia</option>
+                            <option>Banho terapêutico</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data">Data *</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Horário *</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                </div>
+
+                <div class="form-row full">
+                    <div class="form-group">
+                        <label for="veterinario">Veterinário responsável</label>
+                        <input type="text" id="veterinario" name="veterinario" placeholder="Ex: Dr. Carlos">
+                    </div>
+                </div>
+
+                <div class="form-row full">
+                    <div class="form-group">
+                        <label for="observacoes">Observações</label>
+                        <textarea id="observacoes" name="observacoes" rows="5" placeholder="Descreva sintomas, restrições ou necessidades especiais"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-enviar">Agendar Tratamento</button>
+                    <button type="reset" class="btn btn-limpar">Limpar Formulário</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Projeto Arca. Todos os direitos reservados.</p>
+        <img src="./images/BRASAO_PREF_SERRA_HORIZONTAL_NEGATIVA.png" alt="Logo Prefeitura">
+    </footer>
+</body>
+<script>
+    const formulario = document.getElementById("formTratamento");
+
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        alert("Tratamento agendado com sucesso!");
+    });
+</script>
+</html>

@@ -1,9 +1,7 @@
-/* ==========================================
-   CONFIGURAÇÕES GERAIS E VARIÁVEIS
-   ========================================== */
+
 :root {
     --primary-color: #2c3e50;
-    --accent-color: #e67e22; /* Laranja caloroso para botões e destaques */
+    --accent-color: #e67e22;
     --background-light: #f8f9fa;
     --text-dark: #333333;
     --text-light: #ffffff;
@@ -27,9 +25,7 @@ body {
     min-height: 100vh;
 }
 
-/* ==========================================
-   HEADER / MENU DE NAVEGAÇÃO (Fiel ao Frame 1)
-   ========================================== */
+
 header {
     background-color: var(--text-light);
     border-bottom: 2px solid var(--border-color);
@@ -66,9 +62,7 @@ nav a:hover, nav a.active {
     color: var(--accent-color);
 }
 
-/* ==========================================
-   COMPONENTES REUTILIZÁVEIS
-   ========================================== */
+
 .container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -101,9 +95,6 @@ nav a:hover, nav a.active {
     text-align: center;
 }
 
-/* ==========================================
-   RODAPÉ (FOOTER)
-   ========================================== */
 footer {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -115,7 +106,7 @@ footer {
 
 
 
-/* CSS Específico da Home */
+
 .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1200') no-repeat center/cover;
     height: 400px;

@@ -11,7 +11,7 @@
     --danger-color: #c0392b;
 }
 
-/* Reset Geral */
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +25,7 @@ body {
     min-height: 100vh;
 }
 
-/* Navbar / Cabeçalho Superior */
+
 nav {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -77,14 +77,14 @@ nav {
     filter: brightness(0.9);
 }
 
-/* Container Principal */
+
 main {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Título e Navegação Interna */
+
 .header-painel {
     display: flex;
     justify-content: space-between;
@@ -120,7 +120,7 @@ main {
     filter: brightness(0.8);
 }
 
-/* Grid de Indicadores (KPI Cards) */
+
 .kpi-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -165,7 +165,7 @@ main {
     border-radius: 50%;
 }
 
-/* Grid de Layout para os Gráficos */
+
 .charts-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
